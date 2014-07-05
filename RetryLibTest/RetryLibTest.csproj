@@ -50,8 +50,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="OnExceptionCatchTest.cs" />
+    <Compile Include="RetryTestHelper.cs" />
+    <Compile Include="ActionAndFunctionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RetryLib\RetryLib.csproj">
+      <Project>{5a7cefb3-4195-46c3-917f-b5c41d602b83}</Project>
+      <Name>RetryLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

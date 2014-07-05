@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RetryLib
 {
-    public class Class1
+    public interface IRetryPolicy
     {
+        bool ShouldRetry(Exception Ex);
     }
 }
