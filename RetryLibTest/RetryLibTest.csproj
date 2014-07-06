@@ -50,10 +50,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AsyncRetryTest.cs" />
+    <Compile Include="IORetryTest.cs" />
     <Compile Include="OnExceptionCatchTest.cs" />
+    <Compile Include="RetryStaticTest.cs" />
     <Compile Include="RetryTestHelper.cs" />
-    <Compile Include="ActionAndFunctionTest.cs" />
+    <Compile Include="ActionAndFunctionRetryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebRetryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RetryLib\RetryLib.csproj">

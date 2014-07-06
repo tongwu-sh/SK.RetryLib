@@ -28,13 +28,13 @@ namespace RetryLibTest
             var retry = new Retry(3);
             int firstCount = 0, secondCount = 0;
             retry.OnExceptionCatch +=
-                (object sender, Retry.ExceptionArgs args) =>
+                (sender, args) =>
                 {
                     firstCount++;
                 };
 
             retry.OnExceptionCatch +=
-                (object sender, Retry.ExceptionArgs args) =>
+                (sender, args) =>
                 {
                     secondCount++;
                 };

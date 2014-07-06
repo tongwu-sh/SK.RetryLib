@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace RetryLib
 {
+    /// <summary>
+    /// WebRetryPolicy used for Web Request retry, only retry for IO Transit Exception 
+    /// </summary>
     public class WebRetryPolicy : IRetryPolicy
     {
         private static HashSet<WebExceptionStatus> NotRetryWebExceptionStatus = new HashSet<WebExceptionStatus>()

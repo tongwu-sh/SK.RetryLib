@@ -5,7 +5,7 @@ using RetryLib;
 namespace RetryLibTest
 {
     [TestClass]
-    public class ActionAndFunctionTest
+    public class ActionAndFunctionRetryTest
     {
         #region TestMethod
         [TestMethod]

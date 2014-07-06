@@ -42,6 +42,8 @@
     <Compile Include="IRetryPolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Retry.cs" />
+    <Compile Include="IORetryPolicy.cs" />
+    <Compile Include="Retry.Static.cs" />
     <Compile Include="WebRetryPolicy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
