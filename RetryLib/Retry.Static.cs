@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RetryLib
+namespace SK.RetryLib
 {
     /// <summary>
     /// Retry.Static contains static method for easy use.

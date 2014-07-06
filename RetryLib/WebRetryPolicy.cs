@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RetryLib
+namespace SK.RetryLib
 {
     /// <summary>
     /// WebRetryPolicy used for Web Request retry, only retry for IO Transit Exception 

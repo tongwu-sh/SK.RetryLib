@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace RetryLib
+namespace SK.RetryLib
 {
     public enum RetryWaitType{
         Linear, // wait Xs, Xs, Xs....

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
-using RetryLib;
+using SK.RetryLib;
 
 namespace RetryLibTest
 {

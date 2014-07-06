@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RetryLib
+namespace SK.RetryLib
 {
     /// <summary>
     /// IORetryPolicy used for IO Operation retry, only retry for IO Transit Exception 

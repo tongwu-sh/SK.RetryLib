@@ -7,8 +7,8 @@
     <ProjectGuid>{5A7CEFB3-4195-46C3-917F-B5C41D602B83}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RetryLib</RootNamespace>
-    <AssemblyName>RetryLib</AssemblyName>
+    <RootNamespace>SK.RetryLib</RootNamespace>
+    <AssemblyName>SK.RetryLib</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
