@@ -58,5 +58,22 @@ Retry.Func(() =>
             {
                 // Do something here.
                 return XXX;
-            }, 4, 2 * 1000, waitType = RetryWaitType.Double);
+            }, 4, 2 * 1000, waitType: RetryWaitType.Double);
 ``` 
+
+###Handler Exception catched###
+RetryLib provide event OnExceptionCatch to handle Exceptions occur in function.
+```csharp
+// Wait 2 sec, 4 sec, 8 sec...
+Retry.Func(() =>
+            {
+                // Do something here.
+                return XXX;
+            }, 4, 2 * 1000, 
+            exceptionHandler: 
+            (sender, exceptionArgs) => 
+            {
+                // Do something in exception handler
+                record(exceptionArgs.Ex);
+            });
+```
