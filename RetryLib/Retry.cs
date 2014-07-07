@@ -78,16 +78,16 @@ namespace SK.RetryLib
         #endregion
 
         #region Method
-        public void ExecuteAction(Action action)
+        public void Action(Action action)
         {
-            ExecuteFunc<bool>(() =>
+            Func<bool>(() =>
             {
                 action();
                 return true;
             });
         }
 
-        public T ExecuteFunc<T>(Func<T> func)
+        public T Func<T>(Func<T> func)
         {
             if (func == null)
             {
@@ -139,16 +139,16 @@ namespace SK.RetryLib
             }
         }
 
-        public async Task ExecuteActionAsync(Func<Task> asyncAction)
+        public async Task ActionAsync(Func<Task> asyncAction)
         {
-            await ExecuteFuncAsync(async () =>
+            await FuncAsync(async () =>
             {
                 await asyncAction();
                 return true;
             });
         }
 
-        public async Task<T> ExecuteFuncAsync<T>(Func<Task<T>> asyncFunc)
+        public async Task<T> FuncAsync<T>(Func<Task<T>> asyncFunc)
         {
             if (asyncFunc == null)
             {

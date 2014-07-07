@@ -13,7 +13,7 @@ namespace RetryLibTest
             RetryTestHelper helper = new RetryTestHelper(new Exception("Test for NoneOnExceptionCatch"), 3);
             var retry = new Retry(3);
 
-            retry.ExecuteAction(() =>
+            retry.Action(() =>
             {
                 helper.Action();
             });
@@ -39,7 +39,7 @@ namespace RetryLibTest
                     secondCount++;
                 };
 
-            retry.ExecuteAction(() =>
+            retry.Action(() =>
             {
                 helper.Action();
             });
@@ -60,7 +60,7 @@ namespace RetryLibTest
                 {
                     count++;
                 };
-            retry.ExecuteAction(() =>
+            retry.Action(() =>
             {
                 helper.Action();
             });
@@ -88,7 +88,7 @@ namespace RetryLibTest
 
             try
             {
-                retry.ExecuteAction(() =>
+                retry.Action(() =>
                 {
                     helper.Action();
                 });

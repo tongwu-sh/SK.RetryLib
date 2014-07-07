@@ -12,92 +12,92 @@ namespace SK.RetryLib
     public partial class Retry
     {
         #region static method for retry easy use
-        public static void ExecuteAction(Action action,
-                                         int retryCount,
-                                         TimeSpan intervalTime,
-                                         RetryWaitType waitType = RetryWaitType.Linear,
-                                         IRetryPolicy retryPolicy = null,
-                                         EventHandler<ExceptionArgs> exceptionHandler = null)
+        public static void Action(Action action,
+                                int retryCount,
+                                TimeSpan intervalTime,
+                                RetryWaitType waitType = RetryWaitType.Linear,
+                                IRetryPolicy retryPolicy = null,
+                                EventHandler<ExceptionArgs> exceptionHandler = null)
         {
             var retry = CreateRetry(retryCount, intervalTime, waitType, retryPolicy, exceptionHandler);
-            retry.ExecuteAction(action);
+            retry.Action(action);
         }
 
-        public static void ExecuteAction(Action action,
-                                         int retryCount,
-                                         int intervalMilliSecond = DefaultIntervalMilliSecond,
-                                         RetryWaitType waitType = RetryWaitType.Linear,
-                                         IRetryPolicy retryPolicy = null,
-                                         EventHandler<ExceptionArgs> exceptionHandler = null)
+        public static void Action(Action action,
+                                int retryCount,
+                                int intervalMilliSecond = DefaultIntervalMilliSecond,
+                                RetryWaitType waitType = RetryWaitType.Linear,
+                                IRetryPolicy retryPolicy = null,
+                                EventHandler<ExceptionArgs> exceptionHandler = null)
         {
             var retry = CreateRetry(retryCount, intervalMilliSecond, waitType, retryPolicy, exceptionHandler);
-            retry.ExecuteAction(action);
+            retry.Action(action);
         }
 
-        public static async Task ExecuteActionAsync(Func<Task> action,
-                                         int retryCount,
-                                         TimeSpan intervalTime,
-                                         RetryWaitType waitType = RetryWaitType.Linear,
-                                         IRetryPolicy retryPolicy = null,
-                                         EventHandler<ExceptionArgs> exceptionHandler = null)
+        public static async Task ActionAsync(Func<Task> action,
+                                             int retryCount,
+                                             TimeSpan intervalTime,
+                                             RetryWaitType waitType = RetryWaitType.Linear,
+                                             IRetryPolicy retryPolicy = null,
+                                             EventHandler<ExceptionArgs> exceptionHandler = null)
         {
             var retry = CreateRetry(retryCount, intervalTime, waitType, retryPolicy, exceptionHandler);
-            await retry.ExecuteActionAsync(action);
+            await retry.ActionAsync(action);
         }
 
-        public static async Task ExecuteActionAsync(Func<Task> action,
-                                         int retryCount,
-                                         int intervalMilliSecond = DefaultIntervalMilliSecond,
-                                         RetryWaitType waitType = RetryWaitType.Linear,
-                                         IRetryPolicy retryPolicy = null,
-                                         EventHandler<ExceptionArgs> exceptionHandler = null)
+        public static async Task ActionAsync(Func<Task> action,
+                                             int retryCount,
+                                             int intervalMilliSecond = DefaultIntervalMilliSecond,
+                                             RetryWaitType waitType = RetryWaitType.Linear,
+                                             IRetryPolicy retryPolicy = null,
+                                             EventHandler<ExceptionArgs> exceptionHandler = null)
         {
             var retry = CreateRetry(retryCount, intervalMilliSecond, waitType, retryPolicy, exceptionHandler);
-            await retry.ExecuteActionAsync(action);
+            await retry.ActionAsync(action);
         }
 
-        public static T ExecuteFunc<T>(Func<T> func,
-                                       int retryCount,
-                                       TimeSpan intervalTime,
-                                       RetryWaitType waitType = RetryWaitType.Linear,
-                                       IRetryPolicy retryPolicy = null,
-                                       EventHandler<ExceptionArgs> exceptionHandler = null)
+        public static T Func<T>(Func<T> func,
+                                int retryCount,
+                                TimeSpan intervalTime,
+                                RetryWaitType waitType = RetryWaitType.Linear,
+                                IRetryPolicy retryPolicy = null,
+                                EventHandler<ExceptionArgs> exceptionHandler = null)
         {
             var retry = CreateRetry(retryCount, intervalTime, waitType, retryPolicy, exceptionHandler);
-            return retry.ExecuteFunc(func);
+            return retry.Func(func);
         }
 
-        public static T ExecuteFunc<T>(Func<T> func,
-                                       int retryCount,
-                                       int intervalMilliSecond = DefaultIntervalMilliSecond,
-                                       RetryWaitType waitType = RetryWaitType.Linear,
-                                       IRetryPolicy retryPolicy = null,
-                                       EventHandler<ExceptionArgs> exceptionHandler = null)
+        public static T Func<T>(Func<T> func,
+                                int retryCount,
+                                int intervalMilliSecond = DefaultIntervalMilliSecond,
+                                RetryWaitType waitType = RetryWaitType.Linear,
+                                IRetryPolicy retryPolicy = null,
+                                EventHandler<ExceptionArgs> exceptionHandler = null)
         {
             var retry = CreateRetry(retryCount, intervalMilliSecond, waitType, retryPolicy, exceptionHandler);
-            return retry.ExecuteFunc(func);
+            return retry.Func(func);
         }
 
-        public static async Task<T> ExecuteFuncAsync<T>(Func<Task<T>> func,
-                                       int retryCount,
-                                       int intervalMilliSecond = DefaultIntervalMilliSecond,
-                                       RetryWaitType waitType = RetryWaitType.Linear,
-                                       IRetryPolicy retryPolicy = null,
-                                       EventHandler<ExceptionArgs> exceptionHandler = null)
+        public static async Task<T> FuncAsync<T>(Func<Task<T>> func,
+                                               int retryCount,
+                                               int intervalMilliSecond = DefaultIntervalMilliSecond,
+                                               RetryWaitType waitType = RetryWaitType.Linear,
+                                               IRetryPolicy retryPolicy = null,
+                                               EventHandler<ExceptionArgs> exceptionHandler = null)
         {
             var retry = CreateRetry(retryCount, intervalMilliSecond, waitType, retryPolicy, exceptionHandler);
-            return await retry.ExecuteFuncAsync(func);
+            return await retry.FuncAsync(func);
         }
 
-        public static async Task<T> ExecuteFuncAsync<T>(Func<Task<T>> func,
-                                       int retryCount,
-                                       TimeSpan intervalTime,
-                                       RetryWaitType waitType = RetryWaitType.Linear,
-                                       IRetryPolicy retryPolicy = null,
-                                       EventHandler<ExceptionArgs> exceptionHandler = null)
+        public static async Task<T> FuncAsync<T>(Func<Task<T>> func,
+                                               int retryCount,
+                                               TimeSpan intervalTime,
+                                               RetryWaitType waitType = RetryWaitType.Linear,
+                                               IRetryPolicy retryPolicy = null,
+                                               EventHandler<ExceptionArgs> exceptionHandler = null)
         {
             var retry = CreateRetry(retryCount, intervalTime, waitType, retryPolicy, exceptionHandler);
-            return await retry.ExecuteFuncAsync(func);
+            return await retry.FuncAsync(func);
         }
         #endregion
 

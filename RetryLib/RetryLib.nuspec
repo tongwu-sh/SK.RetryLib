@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SK.RetryLib</id>
-    <version>0.8.0</version>
+    <version>0.9.0</version>
     <title>RetryLibrary</title>
     <authors>SK</authors>
     <licenseUrl>http://www.apache.org/licenses/</licenseUrl>

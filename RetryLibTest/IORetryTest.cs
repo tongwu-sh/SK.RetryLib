@@ -17,7 +17,7 @@ namespace RetryLibTest
             int count = 0;
             try
             {
-                retry.ExecuteAction(
+                retry.Action(
                     () =>
                     {
                         count++;
@@ -40,7 +40,7 @@ namespace RetryLibTest
             try
             {
                 new FileStream("InUse", FileMode.OpenOrCreate);
-                retry.ExecuteAction(
+                retry.Action(
                     () =>
                     {
                         count++;
@@ -62,7 +62,7 @@ namespace RetryLibTest
             int count = 0;
             try
             {
-                retry.ExecuteAction(
+                retry.Action(
                     () =>
                     {
                         count++;

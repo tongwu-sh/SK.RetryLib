@@ -12,7 +12,7 @@ namespace RetryLibTest
         public void StaticActionRetry()
         {
             RetryTestHelper helper = new RetryTestHelper(new Exception("StaticActionRetry"), 3);
-            Retry.ExecuteAction(
+            Retry.Action(
                 () =>
             {
                 helper.Action();
@@ -23,7 +23,7 @@ namespace RetryLibTest
         public void StaticFuncRetry()
         {
             RetryTestHelper helper = new RetryTestHelper(new Exception("StaticFuncRetry"), 3);
-            Retry.ExecuteFunc(
+            Retry.Func(
                 () =>
                 {
                     return helper.Function();
@@ -34,7 +34,7 @@ namespace RetryLibTest
         public void StaticActionAsyncRetry()
         {
             RetryTestHelper helper = new RetryTestHelper(new Exception("StaticActionAsyncRetry"), 3);
-            Retry.ExecuteActionAsync(
+            Retry.ActionAsync(
                 async () =>
                 {
                     await Task.Run(() => helper.Function());
@@ -45,7 +45,7 @@ namespace RetryLibTest
         public void StaticFuncAsyncRetry()
         {
             RetryTestHelper helper = new RetryTestHelper(new Exception("StaticFuncAsyncRetry"), 3);
-            Retry.ExecuteFuncAsync(
+            Retry.FuncAsync(
                 async () =>
                 {
                     return await Task.Run( () => helper.Function());

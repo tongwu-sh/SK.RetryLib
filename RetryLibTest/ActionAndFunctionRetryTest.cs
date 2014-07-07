@@ -61,7 +61,7 @@ namespace RetryLibTest
         private void TestExecuteFuntionHelper(int count, int interval, RetryWaitType type)
         {
             RetryTestHelper helper = new RetryTestHelper(new Exception("Exception for TestExecuteFunction"), count);
-            int result = new Retry(count, interval, type).ExecuteFunc(() =>
+            int result = new Retry(count, interval, type).Func(() =>
             {
                 return helper.Function();
             });
@@ -79,7 +79,7 @@ namespace RetryLibTest
         private void TestExecuteActionHelper(int count, int interval, RetryWaitType type)
         {
             RetryTestHelper helper = new RetryTestHelper(new Exception("Exception for TestExecuteFunction"), count);
-            new Retry(count, interval, type).ExecuteAction(helper.Action);
+            new Retry(count, interval, type).Action(helper.Action);
 
             if (count <= 0)
             {

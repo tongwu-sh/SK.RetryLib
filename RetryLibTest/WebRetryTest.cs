@@ -25,7 +25,7 @@ namespace RetryLibTest
             int count = 0;
             try
             {
-                retry.ExecuteFunc(
+                retry.Func(
                     () =>
                     {
                         WebRequest request = WebRequest.Create("http://www.bing.com/");
@@ -55,7 +55,7 @@ namespace RetryLibTest
             int count = 0;
             try
             {
-                retry.ExecuteFunc(
+                retry.Func(
                     () =>
                     {
                         WebRequest request = WebRequest.Create("http://www.facebook.com/");
@@ -79,7 +79,7 @@ namespace RetryLibTest
             int count = 0;
             try
             {
-                retry.ExecuteAction(
+                retry.Action(
                     () =>
                     {
                         count++;
