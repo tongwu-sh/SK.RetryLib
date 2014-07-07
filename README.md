@@ -36,7 +36,7 @@ var task = Retry.FuncAsync(
 task.Wait();
 ```
 ###Use Retry Policy###
-Retry Policy used for only retry specific Exception, RetryLib provide <i>WebRetryPolicy</i> and <i>IORetryPolicy</i>. Developer can implement IRetryPolicy for custom use.
+Retry Policy is used for only retry specific Exception. <i>WebRetryPolicy</i> and <i>IORetryPolicy</i> are provided by RetryLib, and developer can implement IRetryPolicy for custom use.
 ```csharp
 var task = Retry.FuncAsync(
                 async () =>
@@ -62,10 +62,9 @@ Retry.Func(() =>
             }, 4, 2 * 1000, waitType: RetryWaitType.Double);
 ``` 
 
-###Handler Exception catched###
-RetryLib provide event <i>OnExceptionCatch</i> to handle Exceptions occur in function.
+###Exception Handler###
+RetryLib provides event <i>OnExceptionCatch</i> to handle Exceptions in function.
 ```csharp
-// Wait 2 sec, 4 sec, 8 sec...
 Retry.Func(() =>
             {
                 // Do something here.
