@@ -25,13 +25,32 @@ var result = Retry.Func(() =>
              }, 3, 2 * 1000);
 ``` 
 ###Retry async method###
-
+```csharp
+var task = Retry.FuncAsync(
+                async () =>
+                {
+                    WebRequest request = WebRequest.Create(@"http://www.bing.com/");
+                    return await request.GetResponseAsync();
+                }, 3);
+task.Wait();
+```
+###Use Retry Policy###
+Retry Policy used for only retry specific Exception, RetryLib provide WebRetryPolicy and IORetryPolicy. Developer can implement IRetryPolicy for custom use.
+```csharp
+var task = Retry.FuncAsync(
+                async () =>
+                {
+                    WebRequest request = WebRequest.Create(@"http://www.bing.com/");
+                    return await request.GetResponseAsync();
+                }, 3, retryPolicy: new WebRetryPolicy()); // Pass Retry Policy to task.
+task.Wait();
+```
 
 ###Retry Wait Type###
-* Linear: wait Xs, Xs, Xs....
-* Double: wait Xs, 2Xs, 4Xs....
-* Random: wait (0, Xs)
-* Zero: never wait
+* <b>Linear</b>:   wait Xs, Xs, Xs....
+* <b>Double</b>:   wait Xs, 2Xs, 4Xs....
+* <b>Random</b>:   wait (0, Xs)
+* <b>Zero</b>:   never wait
 
 ```csharp
 // Wait 2 sec, 4 sec, 8 sec...
