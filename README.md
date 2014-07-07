@@ -18,16 +18,21 @@ Retry.Action(() =>
              }, 3);
                 
 // Retry 3 times & wait 2 sec
-Retry.Func(() =>
-            {
+var result = Retry.Func(() =>
+             {
                 // Do something here.
                 return XXX;
-            }, 3, 2 * 1000);
+             }, 3, 2 * 1000);
 ``` 
+###Retry async method###
+
 
 ###Retry Wait Type###
-* RetryWaitType.Linear: wait Xs, Xs, Xs....
-* * RetryWaitType.Linear: wait Xs, Xs, Xs....
+* Linear: wait Xs, Xs, Xs....
+* Double: wait Xs, 2Xs, 4Xs....
+* Random: wait (0, Xs)
+* Zero: never wait
+
 ```csharp
 // Wait 2 sec, 4 sec, 8 sec...
 Retry.Func(() =>
