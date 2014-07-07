@@ -1,7 +1,7 @@
 RetryLib
 ========
 
-RetryLib is a .Net Library for C# Retry Operations. It allows developer to easy write retry code for Web/IO Trasient or custom Error. It also support async method.
+RetryLib is a .Net Library for C# Retry Operations. It allows developer to write retry code easily for Web/IO Trasient or custom error. It also supports async method.
 
 Installing via NuGet
 =
@@ -10,14 +10,15 @@ Installing via NuGet
 Sample code
 =
 ###Retry Action or Function###
+Retry action or function if there's some exceptions.
 ```csharp
-// Retry 3 times
+// Retry at most 3 times
 Retry.Action(() =>
              {
                 // Do something here.
              }, 3);
                 
-// Retry 3 times & wait 2 sec
+// Retry at most 3 times & wait 2 sec
 var result = Retry.Func(() =>
              {
                 // Do something here.
