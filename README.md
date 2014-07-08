@@ -70,8 +70,7 @@ Retry.Func(() =>
                 // Do something here.
                 return XXX;
             }, 4, 2 * 1000, 
-            exceptionHandler: 
-            (sender, exceptionArgs) => 
+            exceptionHandler: (sender, exceptionArgs) => 
             {
                 // Do something in exception handler
                 record(exceptionArgs.Ex);
