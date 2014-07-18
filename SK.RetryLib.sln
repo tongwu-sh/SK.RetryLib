@@ -3,11 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetryLib", "RetryLib\RetryLib.csproj", "{5A7CEFB3-4195-46C3-917F-B5C41D602B83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SK.RetryLib", "SK.RetryLib\SK.RetryLib.csproj", "{5A7CEFB3-4195-46C3-917F-B5C41D602B83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetryLibTest", "RetryLibTest\RetryLibTest.csproj", "{65E274A8-E5C5-4956-8A39-136C24E1FD7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SK.RetryLib.Test", "SK.RetryLibTest\SK.RetryLib.Test.csproj", "{65E274A8-E5C5-4956-8A39-136C24E1FD7D}"
 EndProject
-
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

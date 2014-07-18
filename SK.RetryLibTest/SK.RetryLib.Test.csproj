@@ -60,9 +60,9 @@
     <Compile Include="WebRetryTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RetryLib\RetryLib.csproj">
+    <ProjectReference Include="..\SK.RetryLib\SK.RetryLib.csproj">
       <Project>{5a7cefb3-4195-46c3-917f-b5c41d602b83}</Project>
-      <Name>RetryLib</Name>
+      <Name>SK.RetryLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

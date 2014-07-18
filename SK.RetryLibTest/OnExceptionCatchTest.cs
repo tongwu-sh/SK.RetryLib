@@ -52,7 +52,7 @@ namespace RetryLibTest
         [TestMethod]
         public void SingleOnExceptionCatch()
         {
-            RetryTestHelper helper = new RetryTestHelper(new Exception("Test for MultiOnExceptionCatch"), 3);
+            RetryTestHelper helper = new RetryTestHelper(new Exception("Test for SingleOnExceptionCatch"), 3);
             var retry = new Retry(3);
             int count = 0;
             retry.OnExceptionCatch +=

@@ -58,6 +58,7 @@ namespace RetryLibTest
                 retry.Func(
                     () =>
                     {
+                        // This Test should fail in China.....
                         WebRequest request = WebRequest.Create("http://www.facebook.com/");
                         count++;
                         HttpWebResponse response = (HttpWebResponse)request.GetResponse();
