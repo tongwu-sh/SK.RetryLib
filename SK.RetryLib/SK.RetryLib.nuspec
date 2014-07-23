@@ -2,11 +2,12 @@
 <package >
 <metadata>
     <id>SK.RetryLib</id>
-    <version>0.9.1</version>
+    <version>0.9.2</version>
     <title>SK.RetryLib</title>
     <authors>SK</authors>
     <licenseUrl>http://www.apache.org/licenses/</licenseUrl>
     <projectUrl>https://github.com/skywalker-wu/RetryLib</projectUrl>
+	<iconUrl>https://raw.githubusercontent.com/skywalker-wu/icon/master/star_wars.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Easy use for retry operations in your application. Support async, Web Or IO transient error and more.</description>
     <copyright>Copyright 2014</copyright>

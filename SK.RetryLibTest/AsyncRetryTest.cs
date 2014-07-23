@@ -12,7 +12,8 @@ namespace RetryLibTest
         public void AsyncFunctionRetry()
         {
             RetryTestHelper helper = new RetryTestHelper(new Exception("Exception for TestExecuteFunction"), 3);
-            Task<int> resultTask = new Retry(3, 1000, RetryWaitType.Linear).FuncAsync(() =>
+            Task<int> resultTask = new Retry(3, 1000, RetryWaitType.Linear).FuncAsync(
+                () =>
             {
                 return Task.Run(() => helper.Function());
             });
